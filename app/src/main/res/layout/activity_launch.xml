@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iphone_13_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF4B3A"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ism_logo_1"
+        android:layout_width="72dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/ism_logo" />
+
+    <TextView
+        android:id="@+id/convenience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:fontFamily="@font/sf_pro_rounded_bold"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/convenience"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginBottom="-18dp"
+        android:src="@drawable/scooter" />
+
+    <Button
+        android:id="@+id/lButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/switch_trcks"
+        android:backgroundTint="@color/white"
+        android:elevation="15dp"
+        android:gravity="center"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="#FF4B3A"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DeliverISM</string>
+    <string name="convenience">Convenience on Demand</string>
+
+
+    <string name="get_started">Getstarted</string>
+    <string name="login">Login</string>
+</resources>

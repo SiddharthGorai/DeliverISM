@@ -1,0 +1,29 @@
+<!-- Auto layout, variables, and unit scale are not yet supported -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iphone_13_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/rectangle_6"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/rectangle_6"
+        android:elevation="30dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ism_logo"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
