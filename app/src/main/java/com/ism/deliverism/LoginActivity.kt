@@ -22,6 +22,9 @@ class LoginActivity : AppCompatActivity() {
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
             .putBoolean("isFirstRun", false).apply()
 
+        val intent = Intent(this@LoginActivity,MainActivity::class.java)
+        startActivity((intent))
+
     }
 }
 
