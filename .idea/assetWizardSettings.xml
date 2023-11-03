@@ -28,9 +28,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff4b3a" />
-                            <entry key="outputName" value="baseline_favorite_border_24" />
-                            <entry key="sourceFile" value="D:\Coding\DeliverISM" />
+                            <entry key="outputName" value="cart" />
+                            <entry key="sourceFile" value="C:\Users\Siddharth\Downloads\cart.svg" />
                           </map>
                         </option>
                       </PersistentState>
