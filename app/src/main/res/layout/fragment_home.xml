@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/bg_grey"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home fragment" />
+        android:layout_margin="39dp"
+        android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:text="Delivery\nat your doorstep"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+       <SearchView
+           android:layout_width="250dp"
+           android:layout_marginTop="20dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="-20dp"
+           android:queryHint="Search"
+           android:iconifiedByDefault="false"
+           />
+
+      
+    </LinearLayout>
 </FrameLayout>

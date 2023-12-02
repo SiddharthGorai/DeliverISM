@@ -25,11 +25,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:titleTextColor="@color/transparent">
+
+
             <ImageView
+                android:id="@+id/cartBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginRight="10dp"
+                android:clickable="true"
                 android:src="@drawable/cart"
                 />
 
@@ -53,7 +57,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_margin="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/bg_rounded"
             app:elevation="4dp"
             app:itemActiveIndicatorStyle="@null"

@@ -6,9 +6,7 @@ plugins {
 android {
     namespace 'com.ism.deliverism'
     compileSdk 33
-    viewBinding {
-        enabled = true
-    }
+
     defaultConfig {
         applicationId "com.ism.deliverism"
         minSdk 24
@@ -36,6 +34,8 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
+        viewBinding = true
+
         compose true
     }
     composeOptions {

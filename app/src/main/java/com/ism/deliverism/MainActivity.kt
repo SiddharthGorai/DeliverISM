@@ -1,8 +1,11 @@
 package com.ism.deliverism
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 
@@ -26,10 +29,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //nav drawer
-        toolbar = findViewById(R.id.toolbar)
+//        toolbar = findViewById(R.id.toolbar)
+        toolbar = binding.toolbar
         setSupportActionBar(toolbar)
 
-        drawerLayout = findViewById(R.id.drawer_layout)
+//        drawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout = binding.drawerLayout
         navView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar, 0, 0
@@ -41,9 +46,16 @@ class MainActivity : AppCompatActivity() {
         toolbar.setNavigationIcon(R.drawable.hamburger)
 
 
-            // bottom nav view
+        // bottom nav view
         navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
         setupWithNavController(binding.bottomNavigationView, navController)
+
+        val cart: ImageView = binding.cartBtn
+        cart.setOnClickListener {
+            val intent = Intent(this, cartActivity::class.java)
+            startActivity(intent)
+
+        }
 
 
     }
