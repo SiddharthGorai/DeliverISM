@@ -33,6 +33,29 @@
             android:queryBackground="@null"
 
             />
-      
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/homeTablayout"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="-45dp"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/pink"
+                app:tabRippleColor="@color/transparent"
+                app:tabTextAppearance="@style/customTabDesign"
+                app:tabIndicatorHeight="3dp"
+                app:tabIndicatorFullWidth="false"
+                app:tabSelectedTextColor="@color/pink"
+                app:tabTextColor="@color/grey"
+                app:tabMode="auto" />
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/homeViewPager"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
     </LinearLayout>
 </FrameLayout>
