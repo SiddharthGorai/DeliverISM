@@ -4,11 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragHomeFrag.shopHomeFrag">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/see_more_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="see more"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/pink"
+        android:clickable="true"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:layout_gravity="right"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/shopFragRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Shop Fragment" />
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:scrollbars="horizontal"/>
 
 </FrameLayout>

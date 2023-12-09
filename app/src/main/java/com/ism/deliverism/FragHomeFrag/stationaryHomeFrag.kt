@@ -5,19 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ism.deliverism.ARG_PARAM1
 import com.ism.deliverism.ARG_PARAM2
 import com.ism.deliverism.R
+import com.ism.deliverism.RecyclerViewAdapters.StatFragRecyclerViewAdapter
+import com.ism.deliverism.statData
 
-/**
- * A simple [Fragment] subclass.
- * Use the [stationaryHomeFrag.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class stationaryHomeFrag : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private  lateinit var statAdapter: StatFragRecyclerViewAdapter
+    private  lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,24 +37,24 @@ class stationaryHomeFrag : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_stationary_home, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment stationaryHomeFrag.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            stationaryHomeFrag().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+
+        val statList: ArrayList<statData> = ArrayList()
+
+        statList.add(statData("Pencil","Rs. 5",null))
+        statList.add(statData("Pen","Rs. 5",null))
+        statList.add(statData("Notebook","Rs. 40",null))
+        statList.add(statData("Eraser","Rs. 5",null))
+
+        val layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL,true)
+        recyclerView = view.findViewById(R.id.statFragRecyclerView)
+        recyclerView.layoutManager = layoutManager
+        statAdapter = StatFragRecyclerViewAdapter(statList,this@stationaryHomeFrag)
+        recyclerView.adapter = statAdapter
     }
+
+
+
 }

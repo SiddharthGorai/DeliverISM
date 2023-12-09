@@ -4,20 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ism.deliverism.ARG_PARAM1
 import com.ism.deliverism.ARG_PARAM2
 import com.ism.deliverism.R
+import com.ism.deliverism.RecyclerViewAdapters.FoodFragRecyclerViewAdapter
+import com.ism.deliverism.foodData
 
-/**
- * A simple [Fragment] subclass.
- * Use the [foodHomeFrag.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class foodHomeFrag : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private  lateinit var foodAdapter: FoodFragRecyclerViewAdapter
+    private  lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,23 +38,28 @@ class foodHomeFrag : Fragment() {
         return inflater.inflate(R.layout.fragment_food_home, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment foodFragHome.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            foodHomeFrag().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val see_more_food: TextView = view.findViewById(R.id.see_more_food)
+        see_more_food.setOnClickListener{
+
+        }
+
+        val foodList: ArrayList<foodData> = ArrayList()
+
+        foodList.add(foodData("Samosa","Rs. 7",null))
+        foodList.add(foodData("Pakora","Rs. 7",null))
+        foodList.add(foodData("Kurkure","Rs. 20",null))
+        foodList.add(foodData("Parle-G","Rs. 10",null))
+
+        val layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,true)
+        recyclerView = view.findViewById(R.id.foodFragRecyclerView)
+        recyclerView.layoutManager = layoutManager
+        foodAdapter = FoodFragRecyclerViewAdapter(foodList,this@foodHomeFrag)
+        recyclerView.adapter = foodAdapter
+
+
     }
 }
+

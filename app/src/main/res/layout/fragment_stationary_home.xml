@@ -5,10 +5,29 @@
     android:layout_height="match_parent"
     tools:context=".FragHomeFrag.stationaryHomeFrag">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/see_more_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="see more"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/pink"
+        android:clickable="true"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:layout_gravity="right"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/statFragRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Stationary Fragment" />
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:scrollbars="horizontal"/>
+
+
+
 
 </FrameLayout>
