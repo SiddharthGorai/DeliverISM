@@ -6,10 +6,35 @@
     android:backgroundTint="@color/bg_grey"
     tools:context=".favoritesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Favorites fragment" />
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
 
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="Favorites"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:padding="10dp"
+            android:text="Favorites appear here"
+            android:textColor="@color/grey"
+            android:textSize="20sp" />
+    </LinearLayout>
 </FrameLayout>

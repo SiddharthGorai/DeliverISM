@@ -8,9 +8,10 @@
     tools:context=".HistoryFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_gravity="center_horizontal">
 
         <TextView
@@ -24,23 +25,15 @@
             android:fontFamily="@font/sf_pro_display_medium"
             android:text="History"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="250dp"
             android:layout_gravity="center"
-            android:src="@drawable/history"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.885" />
+            android:src="@drawable/history" />
 
         <TextView
             android:id="@+id/textView2"
@@ -50,13 +43,7 @@
             android:fontFamily="@font/sf_pro_display_medium"
             android:padding="10dp"
             android:text="No history yet"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.543" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:textColor="@color/grey"
+            android:textSize="20sp" />
+    </LinearLayout>
 </FrameLayout>
